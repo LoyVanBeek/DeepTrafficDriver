@@ -2,10 +2,10 @@
 //<![CDATA[
 
 // a few things don't have var in front of them - they update already existing variables the game needs
-lanesSide = 1;
+lanesSide = 2;
 patchesAhead = 20;
 patchesBehind = 2;
-trainIterations = 10000;
+trainIterations = 20000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
