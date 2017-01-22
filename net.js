@@ -2,14 +2,14 @@
 //<![CDATA[
 
 // a few things don't have var in front of them - they update already existing variables the game needs
-lanesSide = 2;
-patchesAhead = 20;
-patchesBehind = 2;
-trainIterations = 20000;
+lanesSide = 3;
+patchesAhead = 15;
+patchesBehind = 10;
+trainIterations = 10000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
-var temporal_window = 12;
+var temporal_window = 6;
 var network_size = num_inputs * temporal_window + num_actions * temporal_window + num_inputs;
 
 var layer_defs = [];
@@ -59,7 +59,7 @@ var opt = {};
 opt.temporal_window = temporal_window;
 opt.experience_size = 3000;
 opt.start_learn_threshold = 500;
-opt.gamma = 0.8;
+opt.gamma = 0.1;
 opt.learning_steps_total = 10000;
 opt.learning_steps_burnin = 1000;
 opt.epsilon_min = 0.01;
