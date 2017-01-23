@@ -1,15 +1,14 @@
-
 //<![CDATA[
 
 // a few things don't have var in front of them - they update already existing variables the game needs
-lanesSide = 4;
-patchesAhead = 10;
-patchesBehind = 10;
+lanesSide = 2;
+patchesAhead = 5;
+patchesBehind = 5;
 trainIterations = 20000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
-var temporal_window = 12;
+var temporal_window = 6;
 var network_size = num_inputs * temporal_window + num_actions * temporal_window + num_inputs;
 
 var layer_defs = [];
@@ -21,32 +20,12 @@ layer_defs.push({
 });
 layer_defs.push({
     type:'conv', 
-    sx:7, 
-    filters:32, 
-    stride:1, 
-    pad:2, 
-    activation:'relu'});
-layer_defs.push({
-    type:'conv', 
-    sx:5, 
+    sx:3, 
     filters:16, 
     stride:1, 
     pad:2, 
     activation:'relu'});
-layer_defs.push({
-    type:'conv', 
-    sx:3, 
-    filters:16,
-    stride:1, 
-    pad:2, 
-    activation:'relu'});
-layer_defs.push({
-    type:'conv', 
-    sx:3, 
-    filters:8, 
-    stride:1, 
-    pad:2, 
-    activation:'relu'});
+layer_defs.push({type:'pool', sx:2, stride:2});
 layer_defs.push({
     type:'conv', 
     sx:3, 
@@ -80,7 +59,7 @@ var opt = {};
 opt.temporal_window = temporal_window;
 opt.experience_size = 3000;
 opt.start_learn_threshold = 500;
-opt.gamma = 0.7;
+opt.gamma = 0.1;
 opt.learning_steps_total = 10000;
 opt.learning_steps_burnin = 1000;
 opt.epsilon_min = 0.01;
