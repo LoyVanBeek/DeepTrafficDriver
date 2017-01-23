@@ -21,7 +21,7 @@ layer_defs.push({
 layer_defs.push({
     type:'conv', 
     sx:3, 
-    filters:16, 
+    filters:32, 
     stride:1, 
     pad:2, 
     activation:'relu'});
