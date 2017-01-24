@@ -2,9 +2,9 @@
 
 // a few things don't have var in front of them - they update already existing variables the game needs
 lanesSide = 2;
-patchesAhead = 8;
+patchesAhead = 10;
 patchesBehind = 5;
-trainIterations = 20000;
+trainIterations = 40000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
