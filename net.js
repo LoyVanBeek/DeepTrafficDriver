@@ -29,7 +29,7 @@ layer_defs.push({type:'pool', sx:2, stride:2});
 layer_defs.push({
     type:'conv', 
     sx:3, 
-    filters:4, 
+    filters:8, 
     stride:1, 
     pad:2, 
     activation:'relu'});
