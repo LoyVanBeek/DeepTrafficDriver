@@ -35,7 +35,7 @@ layer_defs.push({
     activation:'relu'});
 layer_defs.push({
     type: 'fc',
-    num_neurons: 20,
+    num_neurons: 10,
     activation: 'relu'
 });
 layer_defs.push({
