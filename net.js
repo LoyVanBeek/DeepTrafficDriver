@@ -4,11 +4,11 @@
 lanesSide = 2;
 patchesAhead = 10;
 patchesBehind = 5;
-trainIterations = 40000;
+trainIterations = 100000;
 
 var num_inputs = (lanesSide * 2 + 1) * (patchesAhead + patchesBehind);
 var num_actions = 5;
-var temporal_window = 8;
+var temporal_window = 10;
 var network_size = num_inputs * temporal_window + num_actions * temporal_window + num_inputs;
 
 var layer_defs = [];
