@@ -24,7 +24,7 @@ layer_defs.push({
     filters:32, 
     stride:1, 
     pad:2, 
-    activation:'relu'});
+    activation:'tanh'});
 layer_defs.push({type:'pool', sx:2, stride:2});
 layer_defs.push({
     type:'conv', 
@@ -32,16 +32,16 @@ layer_defs.push({
     filters:16, 
     stride:1, 
     pad:2, 
-    activation:'relu'});
+    activation:'tanh'});
 layer_defs.push({
     type: 'fc',
     num_neurons: 20,
-    activation: 'relu'
+    activation: 'tanh'
 });
 layer_defs.push({
     type: 'fc',
     num_neurons: 5,
-    activation: 'relu'
+    activation: 'tanh'
 });
 layer_defs.push({
     type: 'regression',
