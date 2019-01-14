@@ -3,7 +3,7 @@
 
 // a few things don't have var in front of them - they update already existing variables the game needs
 lanesSide = 3;
-patchesAhead = 20;
+patchesAhead = 40;
 patchesBehind = 10;
 trainIterations = 500000;
 
