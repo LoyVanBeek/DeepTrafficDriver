@@ -24,17 +24,17 @@ var layer_defs = [];
 });
 layer_defs.push({
     type: 'fc',
-    num_neurons: 60,
-    activation: 'tanh'
-});
-layer_defs.push({
-    type: 'fc',
     num_neurons: 40,
     activation: 'tanh'
 });
 layer_defs.push({
     type: 'fc',
     num_neurons: 30,
+    activation: 'tanh'
+});
+layer_defs.push({
+    type: 'fc',
+    num_neurons: 20,
     activation: 'tanh'
 });
 layer_defs.push({
